@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Button, Form, Modal, Container, Row, Col, Card } from "react-bootstrap";
-import Header from '../components/Header';
+import AdminHeader from '../components/AdminHeader';
 import Sidebar from '../components/Sidebar';
 
 const BulkMessage = () => {
@@ -23,6 +23,7 @@ const BulkMessage = () => {
 
   return (
     <>
+    <AdminHeader/>
   <div class="container-fluid page-body-wrapper" style={{width: '1000px'}}>      
 
     <Sidebar/>

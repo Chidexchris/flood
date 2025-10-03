@@ -11,7 +11,7 @@ function Sidebar() {
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
         <ul class="nav">
            <li className="nav-item">
-            <Link className="nav-link" to="/">
+            <Link className="nav-link" to="/dashboard">
               <i className="typcn typcn-device-desktop menu-icon"></i>
               <span className="menu-title">Dashboard</span>
               <div className="badge badge-danger">new</div>

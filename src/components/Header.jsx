@@ -1,157 +1,63 @@
 import React from 'react'
+import '../../public/css/style.css'
+import '../../public/css/bootstrap.min.css';
 
 function Header() {
   return (
     <>
-      <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style={{overflow:'hidden'}}>
-        <div className="navbar-brand-wrapper d-flex justify-content-center">
-          <div className="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
-            <a className="navbar-brand brand-logo" href="index.html">
-              <img src="../../../assets/images/logo.svg" alt="logo" />
-            </a>
-            <a className="navbar-brand brand-logo-mini" href="index.html">
-              <img src="../../../assets/images/logo-mini.svg" alt="logo" />
-            </a>
-            <button className="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
-              <span className="typcn typcn-th-menu"></span>
-            </button>
-          </div>
-        </div>
-        <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-          
-          <ul className="navbar-nav navbar-nav-right">
-            <li className="nav-item nav-date dropdown">
-              <a className="nav-link d-flex justify-content-center align-items-center" href="javascript:;">
-                <h6 className="date mb-0">Today : Mar 23</h6>
-                <i className="typcn typcn-calendar"></i>
-              </a>
-            </li>
-            <li className="nav-item dropdown">
-              <a className="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-bs-toggle="dropdown">
-                <i className="typcn typcn-mail mx-0"></i>
-                <span className="count"></span>
-              </a>
-              <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
-                <p className="mb-0 fw-normal float-start dropdown-header">Messages</p>
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <img src="../../../assets/images/faces/face4.jpg" alt="image" className="profile-pic" />
-                  </div>
-                  <div className="preview-item-content flex-grow">
-                    <h6 className="preview-subject ellipsis fw-normal">David Grey</h6>
-                    <p className="fw-light small-text text-muted mb-0">
-                      The meeting is cancelled
-                    </p>
-                  </div>
+     {/*  Topbar Start  */}
+    <div className="container-fluid bg-primary text-white d-none d-lg-flex wow fadeIn " data-wow-delay="0.1s">
+        <div className="container py-3">
+            <div className="d-flex align-items-center">
+                <a href="index.html">
+                    <h2 className="text-white fw-bold m-0">FLOOD FREE</h2>
                 </a>
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <img src="../../../assets/images/faces/face2.jpg" alt="image" className="profile-pic" />
-                  </div>
-                  <div className="preview-item-content flex-grow">
-                    <h6 className="preview-subject ellipsis fw-normal">Tim Cook</h6>
-                    <p className="fw-light small-text text-muted mb-0">
-                      New product launch
-                    </p>
-                  </div>
-                </a>
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <img src="../../../assets/images/faces/face3.jpg" alt="image" className="profile-pic" />
-                  </div>
-                  <div className="preview-item-content flex-grow">
-                    <h6 className="preview-subject ellipsis fw-normal"> Johnson</h6>
-                    <p className="fw-light small-text text-muted mb-0">
-                      Upcoming board meeting
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li>
-            <li className="nav-item dropdown me-0">
-              <a className="nav-link count-indicator dropdown-toggle d-flex align-items-center justify-content-center" id="notificationDropdown" href="#" data-bs-toggle="dropdown">
-                <i className="typcn typcn-bell mx-0"></i>
-                <span className="count"></span>
-              </a>
-              <div className="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
-                <p className="mb-0 fw-normal float-start dropdown-header">Notifications</p>
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-success">
-                      <i className="typcn typcn-info mx-0"></i>
+                <div className="ms-auto d-flex align-items-center">
+                    <small className="ms-4"><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
+                    <small className="ms-4"><i className="fa fa-envelope me-3"></i>info@example.com</small>
+                    <small className="ms-4"><i className="fa fa-phone-alt me-3"></i>+012 345 67890</small>
+                    <div className="ms-3 d-flex">
+                        <a className="btn btn-sm-square btn-light text-primary ms-2" href=""><i
+                                className="fab fa-facebook-f"></i></a>
+                        <a className="btn btn-sm-square btn-light text-primary ms-2" href=""><i
+                                className="fab fa-twitter"></i></a>
+                        <a className="btn btn-sm-square btn-light text-primary ms-2" href=""><i
+                                className="fab fa-linkedin-in"></i></a>
                     </div>
-                  </div>
-                  <div className="preview-item-content">
-                    <h6 className="preview-subject fw-normal">Application Error</h6>
-                    <p className="fw-light small-text mb-0 text-muted">
-                      Just now
-                    </p>
-                  </div>
-                </a>
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-warning">
-                      <i className="typcn typcn-cog-outline mx-0"></i>
-                    </div>
-                  </div>
-                  <div className="preview-item-content">
-                    <h6 className="preview-subject fw-normal">Settings</h6>
-                    <p className="fw-light small-text mb-0 text-muted">
-                      Private message
-                    </p>
-                  </div>
-                </a>
-                <a className="dropdown-item preview-item">
-                  <div className="preview-thumbnail">
-                    <div className="preview-icon bg-info">
-                      <i className="typcn typcn-user mx-0"></i>
-                    </div>
-                  </div>
-                  <div className="preview-item-content">
-                    <h6 className="preview-subject fw-normal">New user registration</h6>
-                    <p className="fw-light small-text mb-0 text-muted">
-                      2 days ago
-                    </p>
-                  </div>
-                </a>
-              </div>
-            </li>
-          </ul>
-          <button className="navbar-toggler navbar-toggler-right d-lg-none align-self-center" type="button" data-toggle="offcanvas">
-            <span className="typcn typcn-th-menu"></span>
-          </button>
-        </div>
-      </nav>
-
-      <nav className="navbar-breadcrumb col-xl-12 col-12 d-flex flex-row p-0">
-        
-        <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
-          <ul className="navbar-nav me-lg-2">
-            <li className="nav-item ms-0">
-              <h4 className="mb-0">Dashboard</h4>
-            </li>
-            <li className="nav-item">
-              <div className="d-flex align-items-baseline">
-                <p className="mb-0">Home</p>
-                <i className="typcn typcn-chevron-right"></i>
-                <p className="mb-0">Main Dahboard</p>
-              </div>
-            </li>
-          </ul>
-          <ul className="navbar-nav navbar-nav-right">
-            <li className="nav-item nav-search d-none d-md-block me-0">
-              <div className="input-group">
-                <input type="text" className="form-control" placeholder="Search..." aria-label="search" aria-describedby="search" />
-                <div className="input-group-prepend d-flex">
-                  <span className="input-group-text" id="search">
-                    <i className="typcn typcn-zoom"></i>
-                  </span>
                 </div>
-              </div>
-            </li>
-          </ul>
+            </div>
         </div>
-      </nav>
+    </div>
+    {/*  Topbar End  */}
+
+
+    {/*  Navbar Start  */}
+    <div className="container-fluid bg-white sticky-top wow fadeIn" data-wow-delay="0.1s">
+        <div className="container">
+            <nav className="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
+                <a href="index.html" className="navbar-brand d-lg-none">
+                    <h1 className="fw-bold m-0">WELDORK</h1>
+                </a>
+                <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse"
+                    data-bs-target="#navbarCollapse">
+                    <span className="navbar-toggler-icon"></span>
+                </button>
+                <div className="collapse navbar-collapse" id="navbarCollapse">
+                    <div className="navbar-nav">
+                        <a href="index.html" className="nav-item nav-link active">Home</a>
+                        <a href="about.html" className="nav-item nav-link">About</a>
+                        <a href="service.html" className="nav-item nav-link">Services</a>
+                        <a href="contact.html" className="nav-item nav-link">Contact</a>
+                    </div>
+                    <div className="ms-auto d-none d-lg-block">
+                        <a href="" className="btn btn-primary py-2 px-3">Sign in</a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+    </div>
+    {/*  Navbar End  */}
+    
     </>
   )
 }
