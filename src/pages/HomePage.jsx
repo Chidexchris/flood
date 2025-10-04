@@ -3,9 +3,13 @@ import '../../public/css/style.css'
 import '../../public/css/bootstrap.min.css';
 import Header from '../components/Header';
 import Footer from '../components/Footer';
-
+import PopupForm from '../components/PopupForm';
+import { Link } from "react-router-dom";
+import { useState } from 'react';
 
 function HomePage() {
+    const [showPopup, setShowPopup] = useState(false);
+
   return (
     <>
      {/* Spinner Start */}
@@ -40,7 +44,10 @@ function HomePage() {
                     <div className="carousel-caption">
                         <h1 className="display-1 text-uppercase text-white mb-4 animated zoomIn">Stay Ahead of the Flood – Get Early Warnings Instantly
                         </h1>
-                        <a href="#" className="btn btn-primary py-3 px-4">Sign Up for Free Alerts</a>
+                        <Link className="btn btn-primary py-3 px-4" onClick={() => setShowPopup(true)}>
+                            Sign Up for Free Alerts
+                        </Link>
+
                     </div>
                 </div>
                 <div className="carousel-item">
@@ -56,14 +63,16 @@ function HomePage() {
                     <div className="carousel-caption">
                         <h1 className="display-1 text-uppercase text-white mb-4 animated zoomIn">Smart Sensor Technology to Keep Communities Safe
                         </h1>
-                        <a href="#" className="btn btn-primary py-3 px-4">Join Our Alert Network</a>
+                        <Link className="btn btn-primary py-3 px-4" onClick={() => setShowPopup(true)}>
+                           Join Our Alert Networ
+                        </Link>
                     </div>
                 </div>
             </div>
         </div>
     </div>
     {/*  Carousel End  */}
-
+<PopupForm show={showPopup} onClose={() => setShowPopup(false)} />
 
     {/*  About Start  */}
     <div className="container-fluid pt-6 pb-6">

@@ -8,11 +8,11 @@ function Header() {
   return (
     <>
      {/*  Topbar Start  */}
-    <div className="container-fluid bg-primary text-white d-none d-lg-flex wow fadeIn " data-wow-delay="0.1s">
+    <div className="container-fluid bg-primary text-white d-none d-lg-flex wow fadeIn pt-0 mt-0 " data-wow-delay="0.1s" style={{width:'1391px', marginTop:'0 !important'}}>
         <div className="container py-3">
             <div className="d-flex align-items-center">
                    <Link to="/">
-                    <h2 className="text-white fw-bold m-0">FLOOD FREE</h2>
+                    <h2 className="text-white fw-bold m-0">FLOOD Alert</h2>
                    </Link>
                 <div className="ms-auto d-flex align-items-center">
                     <small className="ms-4"><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
@@ -38,7 +38,7 @@ function Header() {
         <div className="container">
             <nav className="navbar navbar-expand-lg bg-white navbar-light p-lg-0">
                 <Link  className="navbar-brand d-lg-none" to="/">
-                     <h1 className="fw-bold m-0">WELDORK</h1>
+                     <h1 className="fw-bold m-0">Flood Alert</h1>
                 </Link>
                 <button type="button" className="navbar-toggler me-0" data-bs-toggle="collapse"
                     data-bs-target="#navbarCollapse">
