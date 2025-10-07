@@ -15,9 +15,9 @@ function Header() {
                     <h2 className="text-white fw-bold m-0">FLOOD Alert</h2>
                    </Link>
                 <div className="ms-auto d-flex align-items-center">
-                    <small className="ms-4"><i className="fa fa-map-marker-alt me-3"></i>123 Street, New York, USA</small>
-                    <small className="ms-4"><i className="fa fa-envelope me-3"></i>info@example.com</small>
-                    <small className="ms-4"><i className="fa fa-phone-alt me-3"></i>+012 345 67890</small>
+                    <small className="ms-4"><i className="fa fa-map-marker-alt me-3"></i>No 27 ph road, Aba, Abia State, Nigeria</small>
+                    <small className="ms-4"><i className="fa fa-envelope me-3"></i>info@earlyfloodalert.com</small>
+                    <small className="ms-4"><i className="fa fa-phone-alt me-3"></i>+234 91 345 67890</small>
                     <div className="ms-3 d-flex">
                         <a className="btn btn-sm-square btn-light text-primary ms-2" href=""><i
                                 className="fab fa-facebook-f"></i></a>
@@ -51,7 +51,7 @@ function Header() {
                         <Link className="nav-item nav-link" to="/contact">Contact</Link>
                     </div>
                     <div className="ms-auto d-none d-lg-block">
-                        <Link className="btn btn-primary py-2 px-3" to="/dashboard">Sign in</Link>
+                        <Link className="btn btn-primary py-2 px-3" to="/signin">Sign in</Link>
                        
                     </div>
                 </div>

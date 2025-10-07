@@ -9,6 +9,8 @@ import Contact from './pages/Contact';
 import Location1 from './pages/Location1';
 import Location2 from './pages/Location2';
 import Location3 from './pages/Location3';
+import Signin from './pages/Sign_in';
+
 function App() {
 
   return (
@@ -25,6 +27,7 @@ function App() {
           <Route path="/location1" element={<Location1 />} />
           <Route path="/location2" element={<Location2 />} />
           <Route path="/location3" element={<Location3 />} />
+          <Route path="/signin" element={<Signin />} />
         </Routes>
     </Router>
      

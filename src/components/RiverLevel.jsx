@@ -1,10 +1,8 @@
-import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const RiverLevel = ({ totalDepth, currentHeight }) => {
-  // Default values (optional fallback)
-  const depth = totalDepth || 20; 
-  const height = currentHeight || 12;
+const RiverLevel = ({ totalDepth = 20, currentHeight = 12 }) => {
+  const depth = totalDepth;
+  const height = currentHeight;
 
   // Calculate percentage
   const percentage = Math.min((height / depth) * 100, 100);
@@ -14,7 +12,6 @@ const RiverLevel = ({ totalDepth, currentHeight }) => {
       <div className="card shadow p-4">
         <h5>Total River Depth: {depth} m</h5>
         <h5>Current Water Height: {height} m</h5>
-
         <div className="progress mt-3" style={{ height: "30px" }}>
           <div
             className={`progress-bar ${
@@ -29,7 +26,6 @@ const RiverLevel = ({ totalDepth, currentHeight }) => {
             {percentage.toFixed(1)}%
           </div>
         </div>
-
         <p className="mt-3 text-muted">
           {percentage < 70
             ? "✅ Water level is safe."

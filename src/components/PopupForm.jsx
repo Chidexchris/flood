@@ -8,6 +8,7 @@ const PopupForm = ({ show, onClose }) => {
     name: "",
     email: "",
     phone: "",
+    Location: "",
   });
 
   const handleChange = (e) => {
@@ -23,7 +24,7 @@ const PopupForm = ({ show, onClose }) => {
   return (
     <div className="popup-overlay ">
       <div className="popup-container">
-        <h2>Contact Us</h2>
+        <h2>Submit Your Details</h2>
         <form onSubmit={handleSubmit}>
           <input
             type="text"
@@ -49,6 +50,17 @@ const PopupForm = ({ show, onClose }) => {
             onChange={handleChange}
             required
           />
+          <select
+            name="Location"
+            value={formData.Location}
+            onChange={handleChange}
+            required
+          >
+            <option value="">Select Location</option>
+            <option value="Abia State">Abia State</option>
+            <option value="Imo State">Imo State</option>
+            <option value="Rivers">Rivers</option>
+          </select>
         </form>
           <button type="submit">Submit</button>
         <button className="close-btn" onClick={onClose}>
