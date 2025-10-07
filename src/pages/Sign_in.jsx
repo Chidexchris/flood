@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom"; // ✅ import this
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const Login = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
+
+  const navigate = useNavigate(); // ✅ initialize navigate
 
   // Default credentials (you can change them here)
   const DEFAULT_USERNAME = "admin";
@@ -16,7 +19,7 @@ const Login = () => {
     if (username === DEFAULT_USERNAME && password === DEFAULT_PASSWORD) {
       // ✅ Successful login
       alert("✅ Login successful!");
-      window.location.href = "/dashboard"; // Redirect to dashboard
+      navigate("/dashboard"); // ✅ Redirect to dashboard route inside your React app
     } else {
       // ❌ Invalid login
       setError("Invalid username or password!");
@@ -27,8 +30,8 @@ const Login = () => {
     <div className="d-flex align-items-center justify-content-center vh-100 bg-light">
       <div className="card shadow p-4" style={{ width: "400px", borderRadius: "15px" }}>
         <h3 className="text-center mb-4">Flood Detector Login</h3>
-        
-        {error && <div className="alert alert-danger ">{error}</div>}
+
+        {error && <div className="alert alert-danger">{error}</div>}
 
         <form onSubmit={handleSubmit}>
           <div className="mb-3">
@@ -57,9 +60,7 @@ const Login = () => {
             />
           </div>
 
-          <button type="submit" className="btn btn-primary w-100">
-            Login
-          </button>
+          <button type="submit" className="btn btn-primary w-100">Login</button>
         </form>
 
         <p className="text-center mt-3 text-muted" style={{ fontSize: "0.9rem" }}>
