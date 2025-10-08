@@ -3,6 +3,7 @@ import Sidebar from '../components/Sidebar'
 import RiverLevel from '../components/RiverLevel'
 import River from '../components/River'
 import AdminHeader from '../components/AdminHeader'
+import '../assets/style.css'
 
 function DashBoard() {
   return (
@@ -19,39 +20,55 @@ function DashBoard() {
       <div class="main-panel">
         <div class="content-wrapper">
 
-          <div class="row">
-            <div class="col-xl-6 grid-margin stretch-card flex-column">
-              <div class="row">
+          
+                <section class="gauges">
+        <div class="gauge" id="waterLevel">
+          <svg viewBox="0 0 100 60">
+            <path d="M10 50 A40 40 0 0 1 90 50" class="bg-ring" />
+            <path d="M10 50 A40 40 0 0 1 90 50" class="fill-ring water" />
+          </svg>
+          <p class="value">-- cm</p>
+          <p class="label">Water Level</p>
+        </div>
 
-                <River/>
-                 <RiverLevel/>
+        <div class="gauge" id="temperature">
+          <svg viewBox="0 0 100 60">
+            <path d="M10 50 A40 40 0 0 1 90 50" class="bg-ring" />
+            <path d="M10 50 A40 40 0 0 1 90 50" class="fill-ring temp" />
+          </svg>
+          <p class="value">-- °C</p>
+          <p class="label">Temperature</p>
+        </div>
 
-                
+        <div class="gauge" id="humidity">
+          <svg viewBox="0 0 100 60">
+            <path d="M10 50 A40 40 0 0 1 90 50" class="bg-ring" />
+            <path d="M10 50 A40 40 0 0 1 90 50" class="fill-ring humid" />
+          </svg>
+          <p class="value">-- %</p>
+          <p class="label">Humidity</p>
+        </div>
+      </section>
+
+       {/* Status  */}
+      <div id="statusIndicator" class="status">Status: Loading...</div>
+
+       {/* Chart  */}
+      <section class="chart">
+        <h3>Live Sensor Readings (Water Level, Temperature & Humidity)</h3>
+        <canvas id="sensorChart"></canvas>
+      </section>
+
+       {/* Timestamp  */}
+      <footer>
+        ⏱ Last Updated: <span id="timestamp">Waiting for data...</span>
+      </footer>
+                {/* <River/> */}
+                 {/* <RiverLevel/> */}
               </div>
             </div>
            
-                <div class="col-md-6 grid-margin stretch-card">
-                  <div class="card">
-                      <h6></h6>
-
-                    <div class="card-body d-flex flex-column justify-content-between">
-                      <div class="d-flex justify-content-between align-items-center m-0 ">
-                      </div>
-                       
-                      <canvas id="sales-chart-a" class="mt-0" height="65"></canvas>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="row h-100">         
-              </div>
-            </div>
-            <div class="col-xl-6 grid-margin stretch-card flex-column">
-
-            </div>
-
-          </div>
-        </div>
+      </div>
         
     </div>
       {/* <!-- main-panel ends --> */}
