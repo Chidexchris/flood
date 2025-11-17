@@ -19,7 +19,13 @@ h1 {
   font-size: 2.2rem;
   color: #0f172a;
 }
-
+.bg-blue{
+  background-color: #041e57 !important;
+  border: none !important;
+}
+.text-blue{
+  color: #041e57 !important;
+}
 h2 {
   color: #1d4ed8;
   margin-top: 0.5rem;

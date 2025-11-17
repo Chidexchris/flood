@@ -3,9 +3,9 @@ import React from 'react'
 function AdminHeader() {
   return (
     <>
-      <nav className="navbar col-lg-12 col-12 p-0 fixed-top d-flex flex-row" style={{overflow:'hidden'}}>
-        <div className="navbar-brand-wrapper d-flex justify-content-center">
-          <div className="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100">
+      <nav className="navbar boder-0 col-lg-12 col-12 p-0 fixed-top d-flex flex-row bg-primary" style={{overflow:'hidden', borderColor:'white'}}>
+        <div className="navbar-brand-wrapper d-flex justify-content-center bg-primary">
+          <div className="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100 bg-primary">
             <a className="navbar-brand brand-logo" href="index.html">
               <img src="../../../assets/images/logo.svg" alt="logo" />
             </a>
@@ -17,7 +17,7 @@ function AdminHeader() {
             </button>
           </div>
         </div>
-        <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
+        <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end ">
           
           <ul className="navbar-nav navbar-nav-right">
             <li className="nav-item nav-date dropdown">
@@ -122,7 +122,7 @@ function AdminHeader() {
           </button>
         </div>
       </nav>
-
+{/* 
       <nav className="navbar-breadcrumb col-xl-12 col-12 d-flex flex-row p-0">
         
         <div className="navbar-menu-wrapper d-flex align-items-center justify-content-end">
@@ -151,7 +151,7 @@ function AdminHeader() {
             </li>
           </ul>
         </div>
-      </nav>
+      </nav> */}
     </>
   )
 }

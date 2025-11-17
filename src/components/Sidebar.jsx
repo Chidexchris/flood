@@ -28,11 +28,11 @@ function Sidebar() {
             <span className="menu-title">Locations</span>
             <i className="menu-arrow"></i>
           </a>
-          <div className="collapse" id="ui-basic">
+          <div className="collapse dropdown" id="ui-basic">
             <ul className="nav flex-column sub-menu">
-              <li><Link to="/location1" className="link">Abia State</Link></li>
-              <li><Link to="/location2" className="link">Imo State</Link></li>
-              <li><Link to="/location3" className="link">Rivers</Link></li>
+              <li className="text-start"><Link to="/location1" className="link">Abia State</Link></li>
+              <li className="text-start"><Link to="/location2" className="link">Imo State</Link></li>
+              <li className="text-start"><Link to="/location3" className="link">Rivers</Link></li>
             </ul>
           </div>
         </li>

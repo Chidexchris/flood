@@ -16,7 +16,52 @@ function Location1() {
           {/* <!-- partial --> */}
           <div class="main-panel">
             <div class="content-wrapper">
-              <RiverLevel totalDepth={30} currentHeight={22}/>
+
+
+              <section class="gauges">
+                <div class="gauge" id="waterLevel">
+                  <svg viewBox="0 0 100 60">
+                    <path d="M10 50 A40 40 0 0 1 90 50" class="bg-ring" />
+                    <path d="M10 50 A40 40 0 0 1 90 50" class="fill-ring water" />
+                  </svg>
+                  <p class="value">-- cm</p>
+                  <p class="label">Water Level</p>
+                </div>
+
+                <div class="gauge" id="temperature">
+                  <svg viewBox="0 0 100 60">
+                    <path d="M10 50 A40 40 0 0 1 90 50" class="bg-ring" />
+                    <path d="M10 50 A40 40 0 0 1 90 50" class="fill-ring temp" />
+                  </svg>
+                  <p class="value">-- °C</p>
+                  <p class="label">Temperature</p>
+                </div>
+
+                <div class="gauge" id="humidity">
+                  <svg viewBox="0 0 100 60">
+                    <path d="M10 50 A40 40 0 0 1 90 50" class="bg-ring" />
+                    <path d="M10 50 A40 40 0 0 1 90 50" class="fill-ring humid" />
+                  </svg>
+                  <p class="value">-- %</p>
+                  <p class="label">Humidity</p>
+                </div>
+              </section>
+
+              {/* Status  */}
+              <div id="statusIndicator" class="status">Status: Loading...</div>
+
+              {/* Chart  */}
+              <section class="chart">
+                <h3>Live Sensor Readings (Water Level, Temperature & Humidity)</h3>
+                <canvas id="sensorChart"></canvas>
+              </section>
+
+              {/* Timestamp  */}
+              <footer>
+                ⏱ Last Updated: <span id="timestamp">Waiting for data...</span>
+              </footer>
+              {/* <River/> */}
+              {/* <RiverLevel/> */}
             </div>
           </div>
         </div>

@@ -117,7 +117,9 @@
     top: -100px;
     transition: .5s;
 }
-
+nav{
+    border: none !important;
+}
 .navbar .navbar-nav .nav-link {
     margin-right: 35px;
     padding: 25px 0;

@@ -44,7 +44,7 @@ function HomePage() {
                     <div className="carousel-caption">
                         <h1 className="display-1 text-uppercase text-white mb-4 animated zoomIn">Stay Ahead of the Flood – Get Early Warnings Instantly
                         </h1>
-                        <Link className="btn btn-primary py-3 px-4" onClick={() => setShowPopup(true)}>
+                        <Link className="btn text-white bg-blue py-3 px-4" onClick={() => setShowPopup(true)}>
                             Sign Up for Free Alerts
                         </Link>
 
@@ -55,7 +55,7 @@ function HomePage() {
                     <div className="carousel-caption">
                         <h1 className="display-1 text-uppercase text-white mb-4 animated zoomIn">Protect Lives and Property with Real-Time Flood Alerts
                         </h1>
-                        <a href="#" className="btn btn-primary py-3 px-4">Learn How It Works</a>
+                        <a href="#" className="btn text-white bg-blue  py-3 px-4">Learn How It Works</a>
                     </div>
                 </div>
                 <div className="carousel-item">
@@ -63,7 +63,7 @@ function HomePage() {
                     <div className="carousel-caption">
                         <h1 className="display-1 text-uppercase text-white mb-4 animated zoomIn">Smart Sensor Technology to Keep Communities Safe
                         </h1>
-                        <Link className="btn btn-primary py-3 px-4" onClick={() => setShowPopup(true)}>
+                        <Link className="btn text-white bg-blue py-3 px-4" onClick={() => setShowPopup(true)}>
                            Join Our Alert Networ
                         </Link>
                     </div>
@@ -210,7 +210,7 @@ function HomePage() {
                             <input type="email" class="form-control border-0 bg-light" id="mail" placeholder="Your Email"/>
                             <label for="mail">Your Email</label>
                         </div>
-                        <button class="btn btn-primary w-100 py-3" type="submit">Submit Now</button>
+                        <button class="btn btn-primary bg-blue w-100 py-3" type="submit">Submit Now</button>
                     </div>
                 </div>
             </div>
@@ -237,7 +237,7 @@ function HomePage() {
 
 
     {/*  Back to Top  */}
-    <a href="#" className="btn btn-lg btn-primary btn-lg-square back-to-top"><i
+    <a href="#" className="btn btn-lg btn-primary bg-blue btn-lg-square back-to-top"><i
             className="bi bi-arrow-up"></i></a>
 
 
