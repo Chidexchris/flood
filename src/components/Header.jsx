@@ -8,11 +8,11 @@ function Header() {
   return (
     <>
      {/*  Topbar Start  */}
-    <div className="container-fluid bg-primary text-white d-none d-lg-flex wow fadeIn pt-0 mt-0 " data-wow-delay="0.1s" style={{width:'1391px', marginTop:'0 !important'}}>
+    <div className="container-fluid bg-blue text-white d-none d-lg-flex wow fadeIn pt-0 mt-0 " data-wow-delay="0.1s" style={{width:'1391px', marginTop:'0 !important'}}>
         <div className="container py-3">
             <div className="d-flex align-items-center">
                    <Link to="/">
-                    <h2 className="text-white fw-bold m-0">HYDROVIGIL</h2>
+                    <h2 className="text-white fw-bold m-0 text-decoration-none">HYDROVIGIL</h2>
                    </Link>
                 <div className="ms-auto d-flex align-items-center">
                     <small className="ms-4"><i className="fa fa-map-marker-alt me-3"></i>No 27 ph road, Aba, Abia State, Nigeria</small>

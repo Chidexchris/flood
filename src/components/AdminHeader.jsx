@@ -3,9 +3,9 @@ import React from 'react'
 function AdminHeader() {
   return (
     <>
-      <nav className="navbar boder-0 col-lg-12 col-12 p-0 fixed-top d-flex flex-row bg-primary" style={{overflow:'hidden', borderColor:'white'}}>
-        <div className="navbar-brand-wrapper d-flex justify-content-center bg-primary">
-          <div className="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100 bg-primary">
+      <nav className="navbar boder-0 col-lg-12 col-12 p-0 fixed-top d-flex flex-row bg-blue" style={{overflow:'hidden', borderColor:'white'}}>
+        <div className="navbar-brand-wrapper d-flex justify-content-center bg-blue">
+          <div className="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100 bg-blue">
             <a className="navbar-brand brand-logo" href="index.html">
               <img src="../../../assets/images/logo.svg" alt="logo" />
             </a>
