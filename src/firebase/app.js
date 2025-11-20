@@ -2,6 +2,7 @@
 import { useEffect } from "react";
 import { initializeApp } from "firebase/app";
 import { getDatabase, ref, onValue } from "firebase/database";
+import { getFirestore } from "firebase/firestore"; // ✅ separate import
 
 const firebaseConfig = {
   apiKey: "AIzaSyC2VTPo6HFQ95sNJqCLzT1kvS90hI8Javc",
@@ -16,6 +17,7 @@ const firebaseConfig = {
 
 const app = initializeApp(firebaseConfig);
 
+// Realtime Database hook
 export default function useFirebase(callback) {
   useEffect(() => {
     const db = getDatabase(app);
@@ -29,3 +31,6 @@ export default function useFirebase(callback) {
     return () => unsubscribe();
   }, [callback]);
 }
+
+// Firestore export (for storing user phone numbers)
+export const db = getFirestore(app);
