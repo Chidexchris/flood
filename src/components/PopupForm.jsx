@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import "../assets/PopupForm.css"; // optional styling
+import "../assets/PopupForm.css";
 
 const PopupForm = ({ show, onClose }) => {
-  if (!show) return null; // don't render popup if show = false
+  if (!show) return null;
 
   const [formData, setFormData] = useState({
     name: "",
@@ -15,14 +15,35 @@ const PopupForm = ({ show, onClose }) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("Form submitted:", formData);
-    onClose(); // close popup after submit
+
+    try {
+      const res = await fetch("/.netlify/functions/addNumber", {
+        method: "POST",
+        body: JSON.stringify({ phone: formData.phone }),
+        headers: { "Content-Type": "application/json" },
+      });
+
+      const data = await res.json();
+      console.log(data);
+
+      alert("Registered successfully!");
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        Location: "",
+      });
+      onClose();
+    } catch (err) {
+      console.error("Error saving user", err);
+      alert("Failed to register");
+    }
   };
 
   return (
-    <div className="popup-overlay ">
+    <div className="popup-overlay">
       <div className="popup-container">
         <h2>Submit Your Details</h2>
         <form onSubmit={handleSubmit}>
@@ -34,6 +55,7 @@ const PopupForm = ({ show, onClose }) => {
             onChange={handleChange}
             required
           />
+
           <input
             type="email"
             name="email"
@@ -42,14 +64,16 @@ const PopupForm = ({ show, onClose }) => {
             onChange={handleChange}
             required
           />
+
           <input
-            type="phone"
+            type="tel"
             name="phone"
-            placeholder="Your phone"
+            placeholder="Your Phone"
             value={formData.phone}
             onChange={handleChange}
             required
           />
+
           <select
             name="Location"
             value={formData.Location}
@@ -61,8 +85,10 @@ const PopupForm = ({ show, onClose }) => {
             <option value="Imo State">Imo State</option>
             <option value="Rivers">Rivers</option>
           </select>
-        </form>
+
           <button type="submit">Submit</button>
+        </form>
+
         <button className="close-btn" onClick={onClose}>
           Close
         </button>
