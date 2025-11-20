@@ -1,0 +1,19 @@
+{
+	"geolocation": {
+		"data": {
+			"city": "Aba",
+			"country": {
+				"code": "NG",
+				"name": "Nigeria"
+			},
+			"subdivision": {
+				"code": "AB",
+				"name": "Abia State"
+			},
+			"timezone": "Africa/Lagos",
+			"latitude": 5.1069,
+			"longitude": 7.3748
+		},
+		"timestamp": 1763595847807
+	}
+}

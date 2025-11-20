@@ -6,8 +6,8 @@ function AdminHeader() {
       <nav className="navbar boder-0 col-lg-12 col-12 p-0 fixed-top d-flex flex-row bg-blue" style={{overflow:'hidden', borderColor:'white'}}>
         <div className="navbar-brand-wrapper d-flex justify-content-center bg-blue">
           <div className="navbar-brand-inner-wrapper d-flex justify-content-between align-items-center w-100 bg-blue">
-            <a className="navbar-brand brand-logo" href="index.html">
-              <img src="../../../assets/images/logo.svg" alt="logo" />
+            <a className="navbar-brand brand-logo" href="/">
+              <h2 className="text-white fw-bold m-0 text-decoration-none">HYDROVIGIL</h2>
             </a>
             <a className="navbar-brand brand-logo-mini" href="index.html">
               <img src="../../../assets/images/logo-mini.svg" alt="logo" />
