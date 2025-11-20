@@ -16,26 +16,19 @@ function Sidebar() {
         </li>
 
         <li className="nav-item">
-          <Link className="nav-link" to="/bulk-messages">
+          <Link className="nav-link" to="/location1">
             <i className="typcn typcn-film menu-icon"></i>
-            <span className="menu-title">Send Flood Alert</span>
+            <span className="menu-title">Station 1</span>
+          </Link>
+        </li>
+        <li className="nav-item">
+          <Link className="nav-link" to="/location2">
+            <i className="typcn typcn-film menu-icon"></i>
+            <span className="menu-title">Station 2</span>
           </Link>
         </li>
 
-        <li className="nav-item">
-          <a className="nav-link" data-bs-toggle="collapse" href="#ui-basic" aria-expanded="false" aria-controls="ui-basic">
-            <i className="typcn typcn-document-text menu-icon"></i>
-            <span className="menu-title">Locations</span>
-            <i className="menu-arrow"></i>
-          </a>
-          <div className="collapse dropdown" id="ui-basic">
-            <ul className="nav flex-column sub-menu">
-              <li className="text-start"><Link to="/location1" className="link">Abia State</Link></li>
-              <li className="text-start"><Link to="/location2" className="link">Imo State</Link></li>
-              <li className="text-start"><Link to="/location3" className="link">Rivers</Link></li>
-            </ul>
-          </div>
-        </li>
+        
 
         <li className="nav-item">
           <a className="nav-link" data-bs-toggle="collapse" href="#charts" aria-expanded="false" aria-controls="charts">
