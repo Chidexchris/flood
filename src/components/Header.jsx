@@ -51,6 +51,15 @@ function Header() {
                                 <Link className="nav-item nav-link active" to="/">Home</Link>
                                 <Link className="nav-item nav-link" to="/about">About</Link>
                                 <Link className="nav-item nav-link" to="/contact">Contact</Link>
+                                <div className="ms-auto d-block d-lg-none  boder-0 gap-3">
+                                <Link className="btn btn-primary  bg-blue py-2 px-3 boder-0 mx-2" to="/signin">Sign in</Link>
+                                <DownloadButton
+                                    fileUrl="../../app-release.apk"  // put your file in public/files folder
+                                    fileName="HydroVigil-App.apk"
+                                    label="Get App"
+                                />
+
+                            </div>
                             </div>
                             <div className="ms-auto d-none d-lg-block boder-0 gap-3">
                                 <Link className="btn btn-primary  bg-blue py-2 px-3 boder-0 mx-2" to="/signin">Sign in</Link>
