@@ -21,7 +21,7 @@ const app = initializeApp(firebaseConfig);
 export default function useFirebase(callback) {
   useEffect(() => {
     const db = getDatabase(app);
-    const dbRef = ref(db, "flood_alert/station1");
+    const dbRef = ref(db, "flood_alert/station2");
 
     const unsubscribe = onValue(dbRef, (snapshot) => {
       const data = snapshot.val();
